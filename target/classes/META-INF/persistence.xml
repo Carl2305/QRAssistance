@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="QRAssistance">
+		<class>com.qrassistance.entitylayer.Area</class>
+		<class>com.qrassistance.entitylayer.Cargo</class>
+		<class>com.qrassistance.entitylayer.Empleado</class>
+		<class>com.qrassistance.entitylayer.Estado</class>
+		<class>com.qrassistance.entitylayer.Login</class>
+		<class>com.qrassistance.entitylayer.Marcacion</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"	value="jdbc:mysql://localhost:3306/qrassistance_bd" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<!-- hibernate.hbm2ddl.auto reemplaza ddl create permite crear tablas y borrar datos -->
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+			<!-- hibernate.show_sql nos permite ver los comanndos sql -->
+			<property name="hibernate.show_sql" value="true" />
+			<property name="packagesToScan" value="com.qrassistance.entitylayer" />
+		</properties>
+	</persistence-unit>
+</persistence>
