@@ -2,6 +2,8 @@ package com.qrassistance.entitylayer;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,6 +11,7 @@ import javax.persistence.Table;
 @Table(name="ESTADO")
 public class Estado {
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int estado;
 	@Column(name="nombre")
 	private String nombre_estado;
@@ -31,4 +34,9 @@ public class Estado {
 	}
 	public Estado() {
 	}
+	public Estado(String nombre_estado) {
+		this.nombre_estado = nombre_estado;
+	}
+	
+	
 }
