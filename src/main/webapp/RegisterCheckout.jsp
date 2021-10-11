@@ -70,9 +70,6 @@
 	    		let DATA=Object.values(JSON.parse(content))
 	    		DataQR={cod:DATA[2],nombre:DATA[1], apellido:DATA[2],car:DATA[3]};
 	    		sound.play();
-	    		let d = new Date();
-			    let fecha=d.getDate()+"/"+(d.getMonth()+ 1)+"/"+d.getFullYear();
-			    let hora=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
 			    const dataLEntra={op:"rSali"};
 			    const objDATA=Object.assign(dataLEntra,DataQR)
 			    $.ajax({
