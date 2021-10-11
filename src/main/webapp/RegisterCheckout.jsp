@@ -66,19 +66,31 @@
 	        var self = this;
 	        self.scanner = new Instascan.Scanner({ video: document.getElementById('previewCheckout'), scanPeriod: 5 });
 	        self.scanner.addListener('scan', function (content, image) {
+	        	let DataQR={};
 	    		let DATA=Object.values(JSON.parse(content))
 	    		DataQR={cod:DATA[2],nombre:DATA[1], apellido:DATA[2],car:DATA[3]};
 	    		sound.play();
 	    		let d = new Date();
 			    let fecha=d.getDate()+"/"+(d.getMonth()+ 1)+"/"+d.getFullYear();
 			    let hora=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
-    			swal({
-    				title: "Salida Registrada",
-    				text: "Nombre: "+DataQR.nombre+", "+DataQR.apellido+"\n"+"Fecha Asistencia: "+fecha+"\n"+"Hora Salida: "+hora,
-    				icon: "success",
-    				button: "OK",
-    				closeOnClickOutside: false
-    			});
+			    const dataLEntra={op:"rSali"};
+			    const objDATA=Object.assign(dataLEntra,DataQR)
+			    $.ajax({
+					url: 'Assistance', 
+					type: 'POST',
+					async: false,
+					data: objDATA,
+					success: function(data){
+						swal({
+		    				title: "Salida Registrada",
+		    				text: data,
+		    				icon: "success",
+		    				button: "OK",
+		    				closeOnClickOutside: false
+		    			});
+					},
+					error:function(e){console.log("error ajax >> "+e.getMessage);}
+				});
 	        });
 	        Instascan.Camera.getCameras().then(function (cameras) {
 	          self.cameras = cameras;

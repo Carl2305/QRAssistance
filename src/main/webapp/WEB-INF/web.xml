@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>com.qrassistance.controller.IntranetServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Assistance</servlet-name>
+  	<display-name>Assistance</display-name>
+  	<description></description>
+  	<servlet-class>com.qrassistance.controller.AssistanceServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Intranet</servlet-name>
   	<url-pattern>/Intranet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Assistance</servlet-name>
+  	<url-pattern>/Assistance</url-pattern>
   </servlet-mapping>
 </web-app>
