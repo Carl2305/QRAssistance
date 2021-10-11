@@ -3,6 +3,8 @@ package com.qrassistance.entitylayer;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -12,6 +14,7 @@ import javax.persistence.Table;
 @Table(name="MARCACION")
 public class Marcacion {
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int marcacion;
 	@ManyToOne
 	@JoinColumn(name="EMPLEADO")
@@ -35,6 +38,15 @@ public class Marcacion {
 		this.estado = estado;
 	}
 	
+	
+	
+	public Marcacion(Empleado empleado, LocalDateTime inicio, LocalDateTime fin, Estado estado) {
+		this.empleado = empleado;
+		this.inicio = inicio;
+		this.fin = fin;
+		this.estado = estado;
+	}
+
 	public int getMarcacion() {
 		return marcacion;
 	}
