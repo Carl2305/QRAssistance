@@ -28,7 +28,7 @@
                             </li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
-                                <a class="dropdown-item mdc-ripple-upgraded" href="#">
+                                <a class="dropdown-item mdc-ripple-upgraded" href="Intranet?val=logOut">
                                     <i class="material-icons leading-icon">logout</i>
                                     <div class="me-3">Salir</div>
                                 </a>
@@ -57,12 +57,12 @@
                         <!-- Drawer section heading (Plugins)-->
                         <div class="drawer-menu-heading pt-1">Asistencia</div>
                         <!-- Drawer link (Charts)-->
-                        <a class="nav-link mdc-ripple-upgraded" href="#">
+                        <a class="nav-link mdc-ripple-upgraded" href="RegisterAssistance.jsp">
                             <div class="nav-link-icon"><i class="material-icons">how_to_reg</i></div>
                             Marcación Entrada
                         </a>
                         <!-- Drawer link (Code Blocks)-->
-                        <a class="nav-link mdc-ripple-upgraded" href="#">
+                        <a class="nav-link mdc-ripple-upgraded" href="RegisterCheckout.jsp">
                             <div class="nav-link-icon"><i class="material-icons">exit_to_app</i></div>
                             Marcación Salida
                         </a>
@@ -87,8 +87,8 @@
                     <div class="d-flex align-items-center">
                         <i class="material-icons text-muted">account_circle</i>
                         <div class="ms-3">
-                            <div class="caption">Usuario: <span>Carlos Mogollon</span></div>
-                            <div class="small fw-500">Administrador</div>
+                            <div class="caption">Usuario: <span><%= misession.getAttribute("Nombre") %></span></div>
+                            <div class="small fw-500"><%= misession.getAttribute("Cargo") %></div>
                         </div>
                     </div>
                 </div>

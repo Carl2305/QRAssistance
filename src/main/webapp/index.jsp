@@ -30,13 +30,14 @@
 			height: 100%;
 		}
     </style>
+	<script src="scripts/SweetAlert.js"></script> 
 </head>
 <body>
 	<div id="modal_Login" tabindex="-1" role="dialog" aria-labelledby="modal_Login">
 	        <div class="modal-dialog1 modal-dialog-centered" role="document">
 	            <div class="modal-content" style="border-radius: 0.5rem">
 	                <div class="modal-body" style="vertical-align: central; text-align: center;">
-	                    <form autocomplete="off" id="frm-Login" role="form">
+	                    <form autocomplete="off" id="frm-Login" role="form" action="Intranet" method="post">
 		                    <div class="d-flex justify-content-center">
 		                    	<img id="imgQRAssistance" class="text-center" src="" alt="" style="width: 200px; height: 180px;" />
 		                        <svg style="position:absolute; top:23%; right: 27%;" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="orange" class="bi bi-search" viewBox="0 0 16 16">
@@ -52,15 +53,15 @@
 	                        </div>
 	                        <div class="col-md-12 col-sm-12 col-xs-12">
 	                            <label for="inputEmail" class="m-2">Correo electrónico</label>
-	                            <input type="email" name="email" class="form-control" placeholder="Ingresar correo" required="" autofocus="" id="email" />
+	                            <input type="email" name="email" class="form-control" placeholder="Ingresar correo" required="" autofocus="" id="email" value="admin@gmail.com"/>
 	                        </div>
 	                        <div class="col-md-12 col-sm-12 col-xs-12">
 	                            <label for="inputPassword" class="m-2">Contraseña</label>
-	                            <input type="password" name="clave" class="form-control" placeholder="Ingresar contraseña" required="" id="password" />
+	                            <input type="password" name="clave" class="form-control" placeholder="Ingresar contraseña" required="" id="password" value="123"/>
 	                        </div>
 	                        <div class="col-md-12 col-sm-12 col-xs-12">
 	                            <hr>
-	                            <button class="btn btn-lg btn-primary btn-block" type="submit" id="btn-Login">Iniciar sesión</button>
+	                            <button class="btn btn-lg btn-primary btn-block" type="submit" id="btn-Login" name="val" value="logIn">Iniciar sesión</button>
 	                        </div>
 	                    </form>
 	                    <p class="mt-4 mb-3 text-muted">© 2021 <span class="font-kaushan">QRAssistance</span></p>
@@ -68,5 +69,14 @@
 	            </div>
 	        </div>
 	    </div>
+<%
+		if(request.getAttribute("msj")!=null){
+			String mensaje=(String)request.getAttribute("msj");%>
+			<%=mensaje %>
+		<%}else{
+			System.out.println("msj >> "+request.getAttribute("msj"));
+		}
+	%>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </body>
 </html>
