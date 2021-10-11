@@ -15,6 +15,7 @@ import javax.persistence.Table;
 public class Marcacion {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="marcacion")
 	private int marcacion;
 	@ManyToOne
 	@JoinColumn(name="EMPLEADO")

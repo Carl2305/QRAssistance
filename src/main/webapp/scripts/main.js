@@ -1,7 +1,5 @@
 /**
  * 
  */
-// almacena la data del QR
-//var DataQR={};
-// instancia del sonido
+// instancia objeto Audio
 var sound= new Audio("sounds/barcode.wav");

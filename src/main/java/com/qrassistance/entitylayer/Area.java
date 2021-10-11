@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Table(name="AREA")
 public class Area {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="cod_area")
 	private String cod_area;
 	@Column(name="nombre")
 	private String nom_area;

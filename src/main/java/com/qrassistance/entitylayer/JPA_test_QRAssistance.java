@@ -62,7 +62,6 @@ public static void main(String[] args)
 		
 		
 		Empleado empleado1 = new Empleado();
-		empleado1.setCod_empleado(1);
 		empleado1.setNom_empleado("Guillermo");
 		empleado1.setApe1_empleado("Rios");
 		empleado1.setApe2_empleado("Balbuena");
