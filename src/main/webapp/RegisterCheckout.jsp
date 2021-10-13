@@ -1,14 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"  pageEncoding="utf-8"%>
 <%@page session="true"  %>
 <%
+String crg="";
 	HttpSession misession= (HttpSession) request.getSession();
 	if(misession.getAttribute("Cargo")==null){
-	    response.sendRedirect("index.jsp");
+		response.sendRedirect("index.jsp");
 	}else{
-	    /* String nivel=misession.getAttribute("codCargo").toString();
-	    if(!nivel.equals("A01")){
-	        response.sendRedirect("index.jsp");
-	    } */
+		crg=misession.getAttribute("Cargo").toString();
 	}
 %>
 <!DOCTYPE html>
@@ -26,7 +24,18 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
     <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 </head>
-<%@include file="templates/navBar.jsp" %>
+<% 
+try{
+	switch(crg){
+	case "C01": %><%@include file="templates/navBarAdmin.jsp" %><%break;
+	case "C02": %><%@include file="templates/navBar.jsp" %><%break;
+	case "C03": %><%@include file="templates/navBarGeren.jsp" %><%break;
+	default: break;}
+}catch(Exception ex){
+	request.getSession().invalidate();
+	response.sendRedirect("index.jsp");
+}
+%>
 	<div class="col-12">
 		<h2 class="text-center pb-3 font-monospace">Muestre sus credenciales (QR) para registrar su salida</h2>
 	</div>
@@ -73,15 +82,17 @@
 			    const dataLEntra={op:"rSali"};
 			    const objDATA=Object.assign(dataLEntra,DataQR)
 			    $.ajax({
-					url: 'Assistance', 
+					url: 'Assistance',
+					dataType:'json',
 					type: 'POST',
 					async: false,
 					data: objDATA,
 					success: function(data){
+						console.log(data)
 						swal({
-		    				title: "Salida Registrada",
-		    				text: data,
-		    				icon: "success",
+							title: data[0],
+		    				text: data[1],
+		    				icon: data[2],
 		    				button: "OK",
 		    				closeOnClickOutside: false
 		    			});

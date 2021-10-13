@@ -1,14 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"  pageEncoding="utf-8"%>
 <%@page session="true"  %>
 <%
+String crg="";
 	HttpSession misession= (HttpSession) request.getSession();
 	if(misession.getAttribute("Cargo")==null){
-	    response.sendRedirect("index.jsp");
+		response.sendRedirect("index.jsp");
 	}else{
-	    /* String nivel=misession.getAttribute("codCargo").toString();
-	    if(!nivel.equals("A01")){
-	        response.sendRedirect("index.jsp");
-	    } */
+		crg=misession.getAttribute("Cargo").toString();
 	}
 %>
 <!DOCTYPE html>
@@ -22,7 +20,18 @@
     <title>Inicio - QRAssistance</title>
     <%@include file="/templates/header.html" %>
 </head>
-<%@include file="templates/navBar.jsp" %>
+<% 
+try{
+	switch(crg){
+	case "C01": %><%@include file="templates/navBarAdmin.jsp" %><%break;
+	case "C02": %><%@include file="templates/navBar.jsp" %><%break;
+	case "C03": %><%@include file="templates/navBarGeren.jsp" %><%break;
+	default: break;}
+}catch(Exception ex){
+	request.getSession().invalidate();
+	response.sendRedirect("index.jsp");
+}
+%>
     <div id="scrollTarget"></div>
     <!-- Dashboard demos-->
     <h1 class="text-center display-2 font-kaushan">QRAssistance</h1>

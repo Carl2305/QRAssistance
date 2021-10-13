@@ -53,9 +53,8 @@ public class IntranetServlet extends HttpServlet {
 		
 		if(email.equals("admin@gmail.com")&&pass.equals("123")) {
 			HttpSession session= request.getSession();
-			session.setAttribute("Cargo", "Administrador");
+			session.setAttribute("Cargo", "C02");
 			session.setAttribute("Nombre", "Mogollon Espinoza");
-			session.setAttribute("User", "i201922675");
 			session.setMaxInactiveInterval(1800);
 			response.sendRedirect("Home.jsp");
 		}else {

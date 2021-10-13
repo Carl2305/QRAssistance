@@ -43,9 +43,13 @@ public static void main(String[] args)
 			System.out.println("Error area: "+e.getMessage());
 		}
 				
-		Cargo cargo1= new Cargo("C01","Responsable Junior");
+		Cargo cargo1= new Cargo("C01","Administrador");
+		Cargo cargo2= new Cargo("C02","Empleado");
+		Cargo cargo3= new Cargo("C03","Gerencia");
 		try {
 			manager.persist(cargo1);
+			manager.persist(cargo2);
+			manager.persist(cargo3);
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("Error Cargo: "+e.getMessage());

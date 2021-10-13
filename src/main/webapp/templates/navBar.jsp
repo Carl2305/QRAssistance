@@ -88,7 +88,7 @@
                         <i class="material-icons text-muted">account_circle</i>
                         <div class="ms-3">
                             <div class="caption">Usuario: <span><%= misession.getAttribute("Nombre") %></span></div>
-                            <div class="small fw-500"><%= misession.getAttribute("Cargo") %></div>
+                            <div class="small fw-500">Empleado</div>
                         </div>
                     </div>
                 </div>

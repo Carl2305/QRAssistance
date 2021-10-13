@@ -7,12 +7,12 @@
             <!-- Drawer toggle button-->
             <button class="btn btn-lg btn-icon order-1 order-lg-0 mdc-ripple-upgraded" id="drawerToggle" href="javascript:void(0);" style="--mdc-ripple-fg-size:28px; --mdc-ripple-fg-scale:2.78151; --mdc-ripple-fg-translate-start:12.2px, 13.8px; --mdc-ripple-fg-translate-end:10px, 10px;"><i class="material-icons">menu</i></button>
             <!-- Navbar brand-->
-            <a class="navbar-brand me-auto" href="index.html"><div class="text-uppercase font-monospace">QRAssistance</div></a>
+            <a class="navbar-brand me-auto" href="Home.jsp"><div class="text-uppercase font-monospace">QRAssistance</div></a>
             <!-- Navbar items-->
             <div class="d-flex align-items-center mx-3 me-lg-0">
                 <!-- Navbar-->
                 <ul class="navbar-nav d-none d-lg-flex">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Home.jsp">Inicio</a></li>
                 </ul>
                 <!-- Navbar buttons-->
                 <div class="d-flex">                    
@@ -28,7 +28,7 @@
                             </li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
-                                <a class="dropdown-item mdc-ripple-upgraded" href="#">
+                                <a class="dropdown-item mdc-ripple-upgraded" href="Intranet?val=logOut">
                                     <i class="material-icons leading-icon">logout</i>
                                     <div class="me-3">Salir</div>
                                 </a>
@@ -48,7 +48,7 @@
                 <div class="drawer-menu">
                     <div class="nav">
                         <!-- Drawer link (Overview)-->
-                        <a class="nav-link active mdc-ripple-upgraded" href="index.html">
+                        <a class="nav-link active mdc-ripple-upgraded" href="Home.jsp">
                             <div class="nav-link-icon"><i class="material-icons">home</i></div>
                             Inicio
                         </a>
@@ -96,12 +96,12 @@
                         <!-- Drawer section heading (Plugins)-->
                         <div class="drawer-menu-heading pt-1">Asistencia</div>
                         <!-- Drawer link (Charts)-->
-                        <a class="nav-link mdc-ripple-upgraded" href="#">
+                        <a class="nav-link mdc-ripple-upgraded" href="RegisterAssistance.jsp">
                             <div class="nav-link-icon"><i class="material-icons">how_to_reg</i></div>
                             Marcación Entrada
                         </a>
                         <!-- Drawer link (Code Blocks)-->
-                        <a class="nav-link mdc-ripple-upgraded" href="#">
+                        <a class="nav-link mdc-ripple-upgraded" href="RegisterCheckout.jsp">
                             <div class="nav-link-icon"><i class="material-icons">exit_to_app</i></div>
                             Marcación Salida
                         </a>
@@ -139,7 +139,7 @@
                     <div class="d-flex align-items-center">
                         <i class="material-icons text-muted">account_circle</i>
                         <div class="ms-3">
-                            <div class="caption">Usuario: <span>Carlos Mogollon</span></div>
+                            <div class="caption">Usuario: <span><%= misession.getAttribute("Nombre") %></div>
                             <div class="small fw-500">Administrador</div>
                         </div>
                     </div>
