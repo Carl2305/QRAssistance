@@ -14,7 +14,7 @@ String crg="";
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Matenimiento Empleados</title>
+	<title>Registrar Empleado</title>
 	<!-- esto sirve para cargar los stilos de la pagina -->
     <%@include file="/templates/header.html" %>
     
