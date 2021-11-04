@@ -27,9 +27,9 @@ String crg="";
 <% 
 try{
 	switch(crg){
-	case "C01": %><%@include file="templates/navBarAdmin.jsp" %><%break;
-	case "C02": %><%@include file="templates/navBar.jsp" %><%break;
-	case "C03": %><%@include file="templates/navBarGeren.jsp" %><%break;
+	case "C01": %><%@include file="/templates/navBarAdmin.jsp" %><%break;
+	case "C02": %><%@include file="/templates/navBar.jsp" %><%break;
+	case "C03": %><%@include file="/templates/navBarGeren.jsp" %><%break;
 	default: break;}
 }catch(Exception ex){
 	request.getSession().invalidate();
@@ -59,8 +59,8 @@ try{
     	</div>
     </div>
     
-<%@include file="templates/footer.jsp" %>
-<%@include file="templates/scripts.html" %>
+<%@include file="/templates/footer.jsp" %>
+<%@include file="/templates/scripts.html" %>
 
     <script type="text/javascript">
 	    var app = new Vue({
@@ -78,17 +78,14 @@ try{
 	        	let DataQR={};
 	    		let DATA=Object.values(JSON.parse(content))
 	    		DataQR={cod:DATA[2],nombre:DATA[1], apellido:DATA[2],car:DATA[3]};
-	    		sound.play();
-			    const dataLEntra={op:"rSali"};
-			    const objDATA=Object.assign(dataLEntra,DataQR)
-			    $.ajax({
-					url: 'Assistance',
+	    		$.ajax({
+					url: 'AssistanceCheckout',
 					dataType:'json',
 					type: 'POST',
 					async: false,
-					data: objDATA,
+					data: DataQR,
 					success: function(data){
-						console.log(data)
+						sound.play();
 						swal({
 							title: data[0],
 		    				text: data[1],

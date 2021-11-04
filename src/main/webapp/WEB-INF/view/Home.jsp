@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"  pageEncoding="utf-8"%>
-<%@page session="true"  %>
+<%@page session="true" %>
 <%
 String crg="";
 	HttpSession misession= (HttpSession) request.getSession();
@@ -23,9 +23,9 @@ String crg="";
 <% 
 try{
 	switch(crg){
-	case "C01": %><%@include file="templates/navBarAdmin.jsp" %><%break;
-	case "C02": %><%@include file="templates/navBar.jsp" %><%break;
-	case "C03": %><%@include file="templates/navBarGeren.jsp" %><%break;
+	case "C01": %><%@include file="/templates/navBarAdmin.jsp" %><%break;
+	case "C02": %><%@include file="/templates/navBar.jsp" %><%break;
+	case "C03": %><%@include file="/templates/navBarGeren.jsp" %><%break;
 	default: break;}
 }catch(Exception ex){
 	request.getSession().invalidate();
@@ -46,7 +46,7 @@ try{
 		</script>
     </div>
     
-<%@include file="templates/footer.jsp" %>
-<%@include file="templates/scripts.html" %>
+<%@include file="/templates/footer.jsp" %>
+<%@include file="/templates/scripts.html" %>
 </body>
 </html>

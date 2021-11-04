@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="utf-8">
@@ -37,7 +40,7 @@
 	        <div class="modal-dialog1 modal-dialog-centered" role="document">
 	            <div class="modal-content" style="border-radius: 0.5rem">
 	                <div class="modal-body" style="vertical-align: central; text-align: center;">
-	                    <form autocomplete="off" id="frm-Login" role="form" action="Intranet" method="post">
+	                    <form autocomplete="off" id="frm-Login" role="form" action="Intranet/Login" method="post">
 		                    <div class="d-flex justify-content-center">
 		                    	<img id="imgQRAssistance" class="text-center" src="" alt="" style="width: 200px; height: 180px;" />
 		                        <svg style="position:absolute; top:23%; right: 27%;" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="orange" class="bi bi-search" viewBox="0 0 16 16">
@@ -52,19 +55,19 @@
 	                            <h1 class="h3 mb-3 font-weight-normal">Bienvenido a <span class="font-kaushan">QRAssistance</span></h1>
 	                        </div>
 	                        <div class="col-md-12 col-sm-12 col-xs-12">
-	                            <label for="inputEmail" class="m-2">Correo electrónico</label>
+	                            <label for="inputEmail" class="m-2">Correo electrÃ³nico</label>
 	                            <input type="email" name="email" class="form-control" placeholder="Ingresar correo" required="" autofocus="" id="email" value="admin@gmail.com"/>
 	                        </div>
 	                        <div class="col-md-12 col-sm-12 col-xs-12">
-	                            <label for="inputPassword" class="m-2">Contraseña</label>
-	                            <input type="password" name="clave" class="form-control" placeholder="Ingresar contraseña" required="" id="password" value="123"/>
+	                            <label for="inputPassword" class="m-2">ContraseÃ±a</label>
+	                            <input type="password" name="clave" class="form-control" placeholder="Ingresar contraseÃ±a" required="" id="password" value="123"/>
 	                        </div>
 	                        <div class="col-md-12 col-sm-12 col-xs-12">
 	                            <hr>
-	                            <button class="btn btn-lg btn-primary btn-block" type="submit" id="btn-Login" name="val" value="logIn">Iniciar sesión</button>
+	                            <button class="btn btn-lg btn-primary btn-block" type="submit" id="btn-Login" name="val" value="logIn">Iniciar sesiÃ³n</button>
 	                        </div>
 	                    </form>
-	                    <p class="mt-4 mb-3 text-muted">© 2021 <span class="font-kaushan">QRAssistance</span></p>
+	                    <p class="mt-4 mb-3 text-muted">Â© 2021 <span class="font-kaushan">QRAssistance</span></p>
 	                </div>
 	            </div>
 	        </div>
