@@ -19,7 +19,7 @@ public class Empleado {
 	@Column(name="cod_empleado")
 	private int cod_empleado;
 	@Column(name="tlf_empleado")
-	private int tlf_empleado;
+	private String tlf_empleado;
 	@ManyToOne
 	@JoinColumn(name="EMPLEADO")
 	private Empleado empleado;
@@ -39,12 +39,13 @@ public class Empleado {
 	@ManyToOne
 	@JoinColumn(name="AREA")
 	private Area area;
-	
+	@Column(name="foto_empleado")
+	private String foto_empleado;
 	public Empleado() {
 	}
 
-	public Empleado(int cod_empleado, int tlf_empleado, Empleado empleado, String nom_empleado, String ape1_empleado,
-			String ape2_empleado, String correo_empleado, Cargo cargo, Login login, Area area) {
+	public Empleado(int cod_empleado, String tlf_empleado, Empleado empleado, String nom_empleado, String ape1_empleado,
+			String ape2_empleado, String correo_empleado, Cargo cargo, Login login, Area area, String foto_empleado) {
 		this.cod_empleado = cod_empleado;
 		this.tlf_empleado = tlf_empleado;
 		this.empleado = empleado;
@@ -55,6 +56,7 @@ public class Empleado {
 		this.cargo = cargo;
 		this.login = login;
 		this.area = area;
+		this.foto_empleado = foto_empleado;
 	}
 
 	public int getCod_empleado() {
@@ -65,11 +67,11 @@ public class Empleado {
 		this.cod_empleado = cod_empleado;
 	}
 
-	public int getTlf_empleado() {
+	public String getTlf_empleado() {
 		return tlf_empleado;
 	}
 
-	public void setTlf_empleado(int tlf_empleado) {
+	public void setTlf_empleado(String tlf_empleado) {
 		this.tlf_empleado = tlf_empleado;
 	}
 
@@ -137,5 +139,14 @@ public class Empleado {
 		this.area = area;
 	}
 
+	public String getFoto_empleado() {
+		return foto_empleado;
+	}
+
+	public void setFoto_empleado(String foto_empleado) {
+		this.foto_empleado = foto_empleado;
+	}
+
+	
 
 }

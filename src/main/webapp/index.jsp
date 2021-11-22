@@ -40,7 +40,7 @@
 	        <div class="modal-dialog1 modal-dialog-centered" role="document">
 	            <div class="modal-content" style="border-radius: 0.5rem">
 	                <div class="modal-body" style="vertical-align: central; text-align: center;">
-	                    <form autocomplete="off" id="frm-Login" role="form" action="Intranet/Login" method="post">
+	                    <form autocomplete="off" id="frm-Login" role="form" action="Login" method="post">
 		                    <div class="d-flex justify-content-center">
 		                    	<img id="imgQRAssistance" class="text-center" src="" alt="" style="width: 200px; height: 180px;" />
 		                        <svg style="position:absolute; top:23%; right: 27%;" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="orange" class="bi bi-search" viewBox="0 0 16 16">

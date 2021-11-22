@@ -16,10 +16,7 @@ String crg="";
 <meta charset="ISO-8859-1">
 <title>Actualizar Empleado</title>
 	<%@include file="/templates/header.html" %>
-    
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
-    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <script type="text/javascript">var file="", boolIMG=false;</script>
 </head>
 <body>
 <% 

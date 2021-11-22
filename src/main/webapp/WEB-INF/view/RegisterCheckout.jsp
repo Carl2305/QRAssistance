@@ -94,7 +94,16 @@ try{
 		    				closeOnClickOutside: false
 		    			});
 					},
-					error:function(e){console.log("error ajax >> "+e.getMessage);}
+					error:function(e){
+						console.log("error ajax >> "+e.getMessage);
+						swal({
+		    				title: "¡Error!",
+		    				text: "Por favor intente nuevamente",
+		    				icon: "error",
+		    				button: "OK",
+		    				closeOnClickOutside: false
+		    			});
+					}
 				});
 	        });
 	        Instascan.Camera.getCameras().then(function (cameras) {

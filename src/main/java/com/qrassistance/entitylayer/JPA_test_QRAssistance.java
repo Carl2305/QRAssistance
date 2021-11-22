@@ -72,12 +72,12 @@ public static void main(String[] args)
 		empleado1.setArea(area1);
 		empleado1.setCargo(cargo1);
 		empleado1.setCorreo_empleado("revivedx.47@gmail.com");
-		empleado1.setTlf_empleado(917585200);
+		empleado1.setTlf_empleado("917585200");
 		empleado1.setEmpleado(null);
 		
 		Login login1 = new Login();
-		login1.setUsuario("admin");
-		login1.setContrasenia("123456");
+		login1.setUsuario("admin@gmail.com");
+		login1.setContrasenia("123");
 		
 		empleado1.setLogin(login1);
 		login1.setEmpleado(empleado1);

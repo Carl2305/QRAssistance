@@ -28,7 +28,7 @@
                             </li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
-                                <a class="dropdown-item mdc-ripple-upgraded" href="Intranet/Logout">
+                                <a class="dropdown-item mdc-ripple-upgraded" href="Logout">
                                     <i class="material-icons leading-icon">logout</i>
                                     <div class="me-3">Salir</div>
                                 </a>
@@ -67,9 +67,9 @@
                             Marcación Salida
                         </a>
                         <!-- Drawer link (Data Tables)-->
-                        <a class="nav-link mdc-ripple-upgraded" href="#">
+                        <a class="nav-link mdc-ripple-upgraded" href="AssistanceHistory">
                             <div class="nav-link-icon"><i class="material-icons">history_toggle_off</i></div>
-                            Historial Asistencia del Mes
+                            Historial Asistencia
                         </a>
                         <!-- Divider-->
                         <div class="drawer-menu-divider mt-2 mb-2"></div>

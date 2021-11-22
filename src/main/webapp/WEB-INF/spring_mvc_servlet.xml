@@ -24,5 +24,6 @@
 	<mvc:resources location="/images/" mapping="/images/**"></mvc:resources>
 	<mvc:resources location="/templates/" mapping="/templates/**"></mvc:resources>
 	<mvc:resources location="/sounds/" mapping="/sounds/**"></mvc:resources>
+	<mvc:resources location="/pdfs/" mapping="/pdfs/**"></mvc:resources>
 </beans>
 
