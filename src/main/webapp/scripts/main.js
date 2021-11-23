@@ -22,7 +22,9 @@ var sendEmployee = function()
 					'Cargo':$("#cargo_employee").val(),
 					'UrlFoto':$('#imgPreview').attr("src"),
 					'Codigo':$("#code_employee").val().trim(),
-					'pwd':$("#pass_employee").val().trim()
+					'pwd':$("#pass_employee").val().trim(),
+					'ar':$("#area_employee").val(),
+					'emsupe':$("#super_employee").val()
 				},
 				success: function(data){
 					if(data=='1'){

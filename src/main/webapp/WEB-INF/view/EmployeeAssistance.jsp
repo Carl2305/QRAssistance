@@ -19,7 +19,7 @@ String crg="";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Marcación Ingreso - QRAssistance</title>
+    <title>Registro de empleados - QRAssistance</title>
     <%@include file="/templates/header.html" %>
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
@@ -39,7 +39,7 @@ try{
 }
 %>
 	<div class="col-12">
-		<h2 class="text-center pb-3 font-monospace">Historial de Asistencia de: <%=misession.getAttribute("Nombre").toString() %></h2>
+		<h2 class="text-center pb-3 font-monospace">Historial de Asistencia</h2>
 	</div>
     <div class="d-flex justify-content-center">
     	<div class="w-50">
@@ -52,7 +52,7 @@ try{
 						</tr>
 					</thead>
 					<tbody id="tableAssistance">
-						<c:forEach items="${listaAssitance }" var="item">
+						<c:forEach items="${listaAssitance2 }" var="item">
 							<tr class="text-center">
 								<td>${item.inicio }</td>
 								<td>${item.fin }</td>
@@ -65,5 +65,7 @@ try{
     </div>
 <%@include file="/templates/footer.jsp" %>
 <%@include file="/templates/scripts.html" %>
+
+    
 </body>
 </html>

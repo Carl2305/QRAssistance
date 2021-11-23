@@ -276,11 +276,30 @@ public class AssistanceController {
 	}
 	
 	@PostMapping("/HistoryAssistance")
-	public String AssistanceHistory(HttpServletRequest request,HttpServletResponse response) throws IOException {
+	public String AssistanceHistory()  {
 		System.out.println("ingresó al AssistanceHistory Post");
 		return null;
 	}
 	
+	/*******************************************************************************/
+	/********** METODOS PARA EL LISTADO DE LAS MARCACIONES de un Empleado **********/
+	/*******************************************************************************/
 	
+	
+	@GetMapping("/SelectedEmployeeA")
+	public String AssistanceHistory(int cod_empleado, Model model) {
+		System.out.println("ingresó al AssistanceHistory Get");
+		List<Marcacion> data=assistanceservice.ListaAsistencia();
+		List<Marcacion>ListMarcacionEmple=new ArrayList<Marcacion>();
+		for(Marcacion item :data) {
+			if(item!=null) {
+				if(item.getEmpleado().getCod_empleado()==cod_empleado) {
+					ListMarcacionEmple.add(item);
+				}
+			}
+		}
+		model.addAttribute("listaAssitance2",ListMarcacionEmple);
+		return "EmployeeAssistance";
+	}
 	
 }

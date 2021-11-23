@@ -65,6 +65,7 @@
                             <nav class="drawer-menu-nested nav">
                                 <a class="nav-link mdc-ripple-upgraded" href="EmployeeRegister">Registrar Empleados</a>
                                 <a class="nav-link mdc-ripple-upgraded" href="EmployeeUpdate">Actualizar Empleados</a>
+                                <a class="nav-link mdc-ripple-upgraded" href="EmployeeListAll">Listado de Empleados</a>
                             </nav>
                         </div>
                         <!-- Drawer link (Layouts)-->
@@ -128,7 +129,7 @@
                             <div class="nav-link-icon"><i class="material-icons">pending_actions</i></div>
                             Reporte Empleados Contratados
                         </a>
-                        <a class="nav-link mdc-ripple-upgraded" href="#">
+                        <a class="nav-link mdc-ripple-upgraded" href="TotalEmployee">
                             <div class="nav-link-icon"><i class="material-icons">pending_actions</i></div>
                             Reporte Asistencias de Empledao
                         </a>

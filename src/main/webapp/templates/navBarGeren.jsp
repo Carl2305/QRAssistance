@@ -89,7 +89,7 @@
                             <div class="nav-link-icon"><i class="material-icons">pending_actions</i></div>
                             Reporte Empleados Contratados
                         </a>
-                        <a class="nav-link mdc-ripple-upgraded" href="#">
+                        <a class="nav-link mdc-ripple-upgraded" href="TotalEmployee">
                             <div class="nav-link-icon"><i class="material-icons">pending_actions</i></div>
                             Reporte Asistencias de Empledao
                         </a>

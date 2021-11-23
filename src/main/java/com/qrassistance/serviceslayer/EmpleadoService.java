@@ -1,9 +1,9 @@
 package com.qrassistance.serviceslayer;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.qrassistance.entitylayer.Empleado;
 import com.qrassistance.interfaces.IEmpleado;
 
@@ -13,7 +13,7 @@ public class EmpleadoService {
 
 	@Autowired
 	private IEmpleado iempleado;
-	
+		
 	public Empleado getEmpleado(int id) {
 		Empleado emple= iempleado.findById(id).get();
 		return emple;
@@ -28,6 +28,10 @@ public class EmpleadoService {
 			rpta=0;
 		}
 		return rpta;
+	}
+	
+	public List<Empleado> ListaEmpleados(){
+		return iempleado.findAll();
 	}
 	
 }

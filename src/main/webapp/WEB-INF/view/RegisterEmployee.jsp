@@ -71,10 +71,27 @@ String crg="";
 				<input class="form-control" type="text" placeholder="Ingrese telefono" id="phone_employee"/>
 			</div>
 			<div class="col-8 mt-2">
+				<label>Area</label>
+				<form:select path="listaareas" id="area_employee" class="form-control">
+					<form:option value="none" label="seleccione Area"></form:option>
+					<form:options items="${listaareas }" itemLabel="nom_area" itemValue="cod_area" />
+				</form:select>
+			</div>
+			<div class="col-8 mt-2">
 				<label>Cargo</label>
 				<form:select path="listacargos" id="cargo_employee" class="form-control">
 					<form:option value="none" label="seleccione cargo"></form:option>
 					<form:options items="${listacargos }" itemLabel="nombre" itemValue="codCargo" />
+				</form:select>
+			</div>
+		</div>
+		<div class="col align-self-end">
+			
+			<div class="col-8 mt-2">
+				<label>Supervisor</label>
+				<form:select path="listasupervisor" id="super_employee" class="form-control">
+					<form:option value="none" label="seleccione Supervisor"></form:option>
+					<form:options items="${listasupervisor }" itemLabel="ape1_empleado" itemValue="cod_empleado" />
 				</form:select>
 			</div>
 			<div class="col-7 mt-2">
@@ -85,8 +102,7 @@ String crg="";
 				<label>Confirmar Contraseña</label>
 				<input class="form-control" type="password" placeholder="Ingrese Confirmación de Contraseña" id="pass_confirm_employee"/>
 			</div>
-		</div>
-		<div class="col align-self-end">
+			
 			<label for="imgproducfile" class="form-label">Foto del Empleado:</label>
 			<input type="file" id="imgproducfile" accept="image/png, image/jpeg, image/gif" hidden="" class="d-none" style="pointer-events: none;">
 			<div class="row">
