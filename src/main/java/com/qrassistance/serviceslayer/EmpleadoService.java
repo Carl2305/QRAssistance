@@ -1,5 +1,6 @@
 package com.qrassistance.serviceslayer;
 
+import java.sql.SQLException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,4 +35,35 @@ public class EmpleadoService {
 		return iempleado.findAll();
 	}
 	
+	public int DeleteEmployee(int codigo) {
+		int resultado = 0;
+		
+		try 
+		{
+			iempleado.deleteById(codigo);
+			resultado = 1;
+		}
+		catch(Exception ex)
+		{
+			resultado = 0;
+			throw ex;
+		}
+		
+		
+		return resultado;
+	}
+	public int UpdateEmployee(Empleado emple) {
+		int resultado = 0;
+		try 
+		{
+			iempleado.save(emple);
+			resultado = 1;
+		}
+		catch(Exception ex)
+		{
+			resultado = 0;
+			throw ex;
+		}
+		return resultado;
+	}
 }

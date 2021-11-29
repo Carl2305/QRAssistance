@@ -21,7 +21,24 @@ String crg="";
     <meta name="author" content="">
     <title>Registro de empleados - QRAssistance</title>
     <%@include file="/templates/header.html" %>
-    
+    <style type="text/css">
+        .btnupdateDataProducts {
+            display: flex;
+            background-color: white;
+            color: black;
+            border-color: white;
+            position: fixed;
+            right: 0px;
+            top: 5rem;
+            padding: 10px;
+            font-size: 16pt;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            box-shadow: gray 4px 3px;
+            outline: none;
+        }
+    </style>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
     <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
@@ -70,8 +87,8 @@ try{
 								<td>${item.area.nom_area }</td>
 								<td><img src="${item.foto_empleado }" height="70" width="100%"></td>
 								<td class="btn-group-vertical text-center">
-									<a href="" class="btn btn-warning">Actualizar</a>
-									<a href="" class="btn btn-danger">Eliminar</a>
+									<a href="EmployeeUpdate?cod=${item.cod_empleado }" class="btn btn-warning">Actualizar</a>
+									<a href="DeleteEmployee?cod=${item.cod_empleado }" class="btn btn-danger">Eliminar</a>
 								</td>
 							</tr>
 						</c:forEach>
@@ -80,9 +97,42 @@ try{
 		    </div>
     	</div>
     </div>
+    
+    
+    
+<div class="modal" tabindex="-1" id="CredentialsModal">
+    <div class="modal-dialog modal-sm">
+		<div clas="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Descarga de Credenciales</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="d-none" id="download_credentials">
+					<h5 class="mt-2">
+						<a href="http://localhost:8080/QRAssistance/pdfs/main.pdf" class="text-success" download="main.pdf">Descargar Credenciales</a>
+					</h5>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary m-2" data-bs-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+    </div>
+</div>
+    
+    
+	<button class="d-flex d-inline align-items-center btnupdateDataProducts" onclick="window.location.href = 'http://localhost:8080/QRAssistance/EmployeeListAll';">
+	    <i class="material-icons">update</i>&#160; Actualizar
+	</button>
+	
+
+    <p id="status" class="d-none">${status}</p>
+    
 <%@include file="/templates/footer.jsp" %>
 <%@include file="/templates/scripts.html" %>
 
+    
     
 </body>
 </html>

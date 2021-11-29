@@ -1,5 +1,4 @@
 package com.qrassistance.entitylayer;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -41,11 +40,16 @@ public class Empleado {
 	private Area area;
 	@Column(name="foto_empleado")
 	private String foto_empleado;
+	@Column(name="fecha_registro")
+	private String fecha_registro;
+	
 	public Empleado() {
 	}
 
+
 	public Empleado(int cod_empleado, String tlf_empleado, Empleado empleado, String nom_empleado, String ape1_empleado,
-			String ape2_empleado, String correo_empleado, Cargo cargo, Login login, Area area, String foto_empleado) {
+			String ape2_empleado, String correo_empleado, Cargo cargo, Login login, Area area, String foto_empleado,
+			String fecha_registro) {
 		this.cod_empleado = cod_empleado;
 		this.tlf_empleado = tlf_empleado;
 		this.empleado = empleado;
@@ -57,7 +61,9 @@ public class Empleado {
 		this.login = login;
 		this.area = area;
 		this.foto_empleado = foto_empleado;
+		this.fecha_registro = fecha_registro;
 	}
+
 
 	public int getCod_empleado() {
 		return cod_empleado;
@@ -147,6 +153,15 @@ public class Empleado {
 		this.foto_empleado = foto_empleado;
 	}
 
+
+	public String getFecha_registro() {
+		return fecha_registro;
+	}
+
+
+	public void setFecha_registro(String fecha_registro) {
+		this.fecha_registro = fecha_registro;
+	}
 	
 
 }

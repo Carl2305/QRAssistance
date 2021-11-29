@@ -33,8 +33,8 @@ import com.itextpdf.layout.property.TextAlignment;
 import net.glxn.qrgen.image.ImageType;
 
 public class Template_PDF_Credentials {
-	String rutaLogoEmpresa="D:\\CIBERTEC\\CURSOS CIBERTEC V\\D_APP_WEB I\\Proyecto\\QRAssistance\\src\\main\\webapp\\images\\logo_qr_assistance.png";
-    String rutaPDF="D:\\CIBERTEC\\CURSOS CIBERTEC V\\D_APP_WEB I\\Proyecto\\QRAssistance\\src\\main\\webapp\\pdfs\\main.pdf";
+	String rutaLogoEmpresa="E:\\ciclo 5\\DAW\\Proyecto\\QRAssistance\\src\\main\\webapp\\images\\logo_qr_assistance.png";
+    String rutaPDF="E:\\ciclo 5\\DAW\\Proyecto\\QRAssistance\\src\\main\\webapp\\pdfs\\main.pdf";
     public void CrearPDF(String nombre, String apellidoPaterno, String apellidoMaterno, String cod, String fechaI, String QR, String ImgEmple) throws IOException {
     	try {
 			PdfWriter writer= new PdfWriter(rutaPDF);

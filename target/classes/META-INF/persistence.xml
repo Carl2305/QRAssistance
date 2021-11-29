@@ -16,7 +16,7 @@
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password" value="" />
 			<!-- hibernate.hbm2ddl.auto reemplaza ddl create permite crear tablas y borrar datos -->
-			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
 			<!-- hibernate.show_sql nos permite ver los comanndos sql -->
 			<property name="hibernate.show_sql" value="true" />

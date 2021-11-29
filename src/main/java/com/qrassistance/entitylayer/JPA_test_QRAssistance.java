@@ -75,6 +75,7 @@ public static void main(String[] args)
 		empleado1.setTlf_empleado("917585200");
 		empleado1.setFoto_empleado("https://i.ibb.co/k42NJqp/E2k-Lb-Mj-XMAQ5-Wjq.jpg");
 		empleado1.setEmpleado(null);
+		empleado1.setFoto_empleado("12/05/2021");
 		
 		Login login1 = new Login();
 		login1.setUsuario("admin@gmail.com");
